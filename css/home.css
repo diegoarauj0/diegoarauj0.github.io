@@ -144,8 +144,3 @@ footer > p > a {
     text-decoration: none;
     color: white;
 }
-
-img.invert {
-    filter: invert(100%);
-}
-
