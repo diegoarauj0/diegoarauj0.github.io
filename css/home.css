@@ -1,147 +1,138 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #000418 url("../image/background.jpg") center center no-repeat;
+    background: url('../images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: rgb(255, 255, 255);
-    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
 }
 
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 50px;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
 }
 
-header > ul {
-    list-style: none;
-    display: flex;
-}
-
-header > ul > li {
-    transition: 0.5s;
-    margin: 10px;
-}
-
-header > ul > li:hover {
-    transition: 0.2s;
-    transform: translateY(2px);
-}
-
-header > ul > li > a {
+header a {
+    color: #fff;
     text-decoration: none;
-    border-bottom: 1px solid white;
-    color: white;
-    font-family: monospace;
-    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #4cd9ff;
 }
 
 main {
     width: 100%;
-    height: calc(100% - 50px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main > section {
-    width: 100%;
-    margin-top: -50px;
-    padding: 20px 0px;
-    background-color: rgba(0, 0, 0, 0.562);
-}
-
-main > section > div.top {
-    margin-bottom: 20px;
-}
-
-main > section > div.top > h1 {
-    width: 100%;
-    text-align: center;
-}
-
-main > section > div.top > p {
-    width: 100%;
-    font-weight: 700;
-    font-family: monospace;
-    text-align: center;
-}
-
-main > section > div.links {
-    width: 100%;
-}
-
-main > section > div.links > h2 {
-    width: 100%;
-    text-align: center;
-}
-
-main > section > div.links > ul {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-
-main > section > div.links > ul > li {
-    transition: 0.4s;
-    width: 60px;
-    height: 100px;
-    margin: 10px 19px;
-    border-bottom: rgba(255, 255, 255, 0.733) 2px solid;
-    font-size: 14px;
-}
-
-main > section > div.links > ul > li:hover {
-    transition: 0.2s;
-    transform: scale(1.1);
-}
-
-main > section > div.links > ul > li > a {
-    font-family: monospace;
-    width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: white;
+    align-items: flex-start;
+    align-content: center;
 }
 
-main > section > div.links > ul > li > a > p {
-    text-align: center;
-    margin-top: 5px;
+.names>h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1s ease-in;
 }
 
-main > section > div.links > ul > li > a > img {
-    border-radius: 20px;
+.names>h2 {
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.names {
     width: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.3);
+    padding-bottom: 10px;
+}
+
+.names>h2,
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.social-icon {
+    animation: popup 1s normal;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    margin: 0px 10px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1.8rem;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+}
+
+.social-icon>img {
+    width: 100%;
+    border-radius: 100%;
 }
 
 footer {
-    position: absolute;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    bottom: 0%;
-    font-family: monospace;
-    font-size: 17px;
-    padding: 2px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.3);
 }
 
-footer > p {
-    text-decoration: underline;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-footer > p > a {
-    text-decoration: none;
-    color: white;
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
