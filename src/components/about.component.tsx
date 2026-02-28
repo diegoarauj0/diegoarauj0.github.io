@@ -12,18 +12,6 @@ export function AboutComponent() {
           Tenho {new Date().getFullYear() - 2006} anos e estudo programação, com
           foco em desenvolvimento backend para web.
         </p>
-        <div className="flex justify-around">
-          <div className="inline-flex rounded-full border border-[#c4a3ff4d] bg-[#c4a3ff1f] px-4 py-2">
-            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent-strong)]">
-              Aprendendo backend
-            </span>
-          </div>
-          <div className="inline-flex rounded-full border border-[#c4a3ff4d] bg-[#c4a3ff1f] px-4 py-2">
-            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent-strong)]">
-              Aprendendo TypeScript/JavaScript
-            </span>
-          </div>
-        </div>
       </article>
     </div>
   );

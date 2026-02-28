@@ -23,7 +23,7 @@ export function ProjectsComponent() {
     <div className="w-full flex justify-center max-w-1xl z-50">
       <section className="flex flex-wrap justify-around w-full">
         {projects.map(({ href, name, src, github }) => (
-          <div className="animate-fade-up-delayed max-w-2xl border-[#c4a3ff4a] border-2 rounded-2xl mx-2">
+          <div className="animate-fade-up-delayed max-w-2xl border-[#c4a3ff4a] border-2 rounded-2xl m-2">
             <header className="flex items-center justify-center rounded-t-2xl relative border-b border-[#c4a3ff38] bg-[#1c1033d9] px-4 py-3">
               <div className="flex items-center gap-2 left-3 absolute">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#ff6b7a]" />
