@@ -17,6 +17,12 @@ export function ProjectsComponent() {
       src: "/screenshots/flatinstall.png",
       github: "https://github.com/diegoarauj0/flatInstall-web",
     },
+    {
+      name: "deeplocal",
+      href: "https://web.deeplocal.qzz.io/",
+      src: "/screenshots/deeplocal.png",
+      github: "https://github.com/diegoarauj0/deeplocal-client"
+    }
   ];
 
   return (
