@@ -13,13 +13,13 @@ export function ProjectsComponent() {
     },
     {
       name: "flatinstall",
-      href: "https://diegoarauj0.github.io/flatInstall-web/",
+      href: "https://flatinstall.vercel.app",
       src: "/screenshots/flatinstall.png",
       github: "https://github.com/diegoarauj0/flatInstall-web",
     },
     {
       name: "deeplocal",
-      href: "https://web.deeplocal.qzz.io/",
+      href: "https://web.deeplocal.qzz.io",
       src: "/screenshots/deeplocal.png",
       github: "https://github.com/diegoarauj0/deeplocal-client"
     }
