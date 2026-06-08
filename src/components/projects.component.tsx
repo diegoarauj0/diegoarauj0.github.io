@@ -22,6 +22,12 @@ export function ProjectsComponent() {
       href: "https://deeplocal.qzz.io",
       src: "/screenshots/deeplocal.png",
       github: "https://github.com/diegoarauj0/deeplocal-client"
+    },
+        {
+      name: "pocketblog",
+      href: "https://pocketblogio.vercel.app/home",
+      src: "/screenshots/pocketblog.png",
+      github: "https://github.com/diegoarauj0/pocketblog-web"
     }
   ];
 
