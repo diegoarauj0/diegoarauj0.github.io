@@ -6,6 +6,7 @@ interface InterfaceProject {
     name: string;
     href: string;
   }[];
+  liveUrl?: string;
 }
 
 const projects: InterfaceProject[] = [
@@ -13,18 +14,21 @@ const projects: InterfaceProject[] = [
     name: "Mercury",
     image: "/screenshots/mercury.png",
     description: "Encurtador de URLs com uma experiencia simples para transformar links longos em enderecos curtos.",
+    liveUrl: "https://merc.diegoarauj0.qzz.io/",
     repositories: [{ name: "Repositorio Mercury", href: "https://github.com/diegoarauj0/mercury-web" }],
   },
   {
     name: "PocketBlog",
     image: "/screenshots/pocketblog.png",
     description: "Blog compacto para publicar e ler posts curtos em Markdown com uma interface direta e agradavel.",
+    liveUrl: "https://pocketblog.diegoarauj0.qzz.io/home",
     repositories: [{ name: "Repositorio PocketBlog", href: "https://github.com/diegoarauj0/pocketblog-web" }],
   },
   {
     name: "FlatInstall",
     image: "/screenshots/flatinstall.png",
     description: "Ferramenta para montar um script de instalacao Flatpak e facilitar a configuracao de aplicativos.",
+    liveUrl: "https://flatinstall.diegoarauj0.qzz.io/",
     repositories: [{ name: "Repositorio FlatInstall", href: "https://github.com/diegoarauj0/flatinstall-web" }],
   },
   {
@@ -39,7 +43,13 @@ const projects: InterfaceProject[] = [
   },
 ];
 
-function ProjectContentComponent({ description, image, name, repositories }: InterfaceProject): React.ReactNode {
+function ProjectContentComponent({
+  description,
+  image,
+  liveUrl,
+  name,
+  repositories,
+}: InterfaceProject): React.ReactNode {
   return (
     <article className="group overflow-hidden rounded-lg border border-white/10 bg-[#171a21] shadow-2xl shadow-black/20">
       <div className="aspect-[16/9] overflow-hidden bg-[#0d0f14]">
@@ -49,6 +59,18 @@ function ProjectContentComponent({ description, image, name, repositories }: Int
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h3 className="font-['Sora'] text-xl font-bold text-white">{name}</h3>
           <div className="flex items-center gap-2">
+            {liveUrl ? (
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Abrir live mode do projeto ${name}`}
+                title={`Abrir live mode do projeto ${name}`}
+                className="inline-flex h-9 items-center rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 font-['Sora']  tracking-[0.12em] text-cyan-100 transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/20"
+              >
+                Live mode
+              </a>
+            ) : null}
             {repositories.map((repository) => (
               <a
                 href={repository.href}
@@ -77,6 +99,7 @@ export function ProjectsContentComponent(): React.ReactNode {
         <ProjectContentComponent
           description={project.description}
           image={project.image}
+          liveUrl={project.liveUrl}
           name={project.name}
           repositories={project.repositories}
           key={project.name}
