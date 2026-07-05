@@ -27,29 +27,15 @@ const projects: InterfaceProject[] = [
   {
     name: "FlatInstall",
     image: "/screenshots/flatinstall.png",
-    description: "Ferramenta para montar um script de instalacao Flatpak e facilitar a configuracao de aplicativos.",
+    description: "Ferramenta para gerar script automatizado para a instalação de apps Flatpak.",
     liveUrl: "https://flatinstall.diegoarauj0.qzz.io/",
     repositories: [{ name: "Repositorio FlatInstall", href: "https://github.com/diegoarauj0/flatinstall-web" }],
   },
-  {
-    name: "DeepLocal",
-    image: "/screenshots/deeplocal.png",
-    description:
-      "Sistema para organizar links por usuario, com uma interface web dedicada ao gerenciamento do conteudo.",
-    repositories: [
-      { name: "Repositorio DeepLocal Client", href: "https://github.com/diegoarauj0/deeplocal-client" },
-      { name: "Repositorio DeepLocal Server", href: "https://github.com/diegoarauj0/deeplocal-server" },
-    ],
-  },
 ];
 
-function ProjectContentComponent({
-  description,
-  image,
-  liveUrl,
-  name,
-  repositories,
-}: InterfaceProject): React.ReactNode {
+function ProjectContentComponent(props: InterfaceProject): React.ReactNode {
+  const { description, image, liveUrl, name, repositories } = props;
+
   return (
     <article className="group overflow-hidden rounded-lg border border-white/10 bg-[#171a21] shadow-2xl shadow-black/20">
       <div className="aspect-[16/9] overflow-hidden bg-[#0d0f14]">
