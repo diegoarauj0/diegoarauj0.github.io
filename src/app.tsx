@@ -16,12 +16,11 @@ export function App() {
           </div>
 
           <p className="mb-4 font-['Sora'] text-xl font-medium tracking-[0.18em] text-slate-100">
-            Ola! Meu nome e <span className="text-purple-300">Diego Araujo</span> e eu sou
+            Ola! Meu nome e <span className="text-purple-300">Diego Araujo</span>
           </p>
 
           <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
-            Tenho 20 anos e estudo programacao com foco em desenvolvimento backend para web. Crio interfaces objetivas,
-            APIs bem organizadas e experiencias digitais pensadas para serem rapidas, acessiveis e faceis de evoluir.
+            Tenho 20 anos e estudo programacao com foco em desenvolvimento backend para web.
           </p>
 
           <SkillsContentComponent />
