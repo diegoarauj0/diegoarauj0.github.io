@@ -35,7 +35,7 @@ const projects: InterfaceProject[] = [
     name: "NachtScan",
     image: "/screenshots/nachtscan.png",
     description: "NachtScan é uma plataforma web que permite verificar, em poucos segundos, se um nickname está disponível ou já está em uso em diversas plataformas na internet (redes sociais, ecossistemas de código, fóruns e jogos). ",
-    liveUrl: "nachtscan.diegoarauj0.qzz.io",
+    liveUrl: "https://nachtscan.diegoarauj0.qzz.io/",
     repositories: [{ name: "Repositorio NachtScan", href: "https://github.com/diegoarauj0/nachtscan-web" }]
   }
 ];
